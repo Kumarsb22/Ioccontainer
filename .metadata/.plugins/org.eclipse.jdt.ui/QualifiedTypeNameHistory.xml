@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.example.demo.bean.DiselEngine"/>
+    <fullyQualifiedTypeName name="com.example.demo.bean.PetrolEngine"/>
+    <fullyQualifiedTypeName name="com.example.demo.bean.IEngine"/>
+    <fullyQualifiedTypeName name="com.example.demo.bean.Car"/>
+    <fullyQualifiedTypeName name="com.example.demo.bean.IPayment"/>
+    <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="com.example.demo.bean.PaymentProcessor"/>
+    <fullyQualifiedTypeName name="com.example.demo.bean.CreditCardPayment"/>
+    <fullyQualifiedTypeName name="com.example.demo.bean.DebitCardPayment"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.SpringBootApplication"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Scope"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="com.example.demo.dao.UserDao"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.context.properties.EnableConfigurationProperties"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.context.properties.ConfigurationProperties"/>
+    <fullyQualifiedTypeName name="com.example.demo.properties.AppProperties"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="com.example.demo.constants.AppConstants"/>
+</qualifiedTypeNameHistroy>

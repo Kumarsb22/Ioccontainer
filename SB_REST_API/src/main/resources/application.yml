@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: SB_REST_API
+    
+server:
+    port: 8090
+   
+app:
+  messages:    
+    welcomeMsg: Welecome to spring boot tutorial    
+    greetMsg: Good Morning    
+       
+    
+    
+    
