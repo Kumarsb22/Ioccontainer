@@ -15,29 +15,30 @@ public class Sbms03IocContainerScopeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(Sbms03IocContainerScopeApplication.class, args);
 
-//		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-beans.xml");
+		ClassPathXmlApplicationContext context1 = new ClassPathXmlApplicationContext("spring-beans.xml");
 
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		PaymentProcessor bean = context.getBean(PaymentProcessor.class);
-	//	PaymentProcessor bean1 = context.getBean(PaymentProcessor.class);
+		PaymentProcessor bean1 = context.getBean(PaymentProcessor.class);
 
-//		CreditCardPayment bean2 = context.getBean(CreditCardPayment.class);
-//		CreditCardPayment bean3 = context.getBean(CreditCardPayment.class);
-//
-//		DebitCardPayment bean4 = context.getBean(DebitCardPayment.class);
-//		DebitCardPayment bean5 = context.getBean(DebitCardPayment.class);
-//
-//		bean.paymentProcessor(12.4);
-//		System.out.println("================================singleton=============================");
-//		System.out.println(bean.hashCode());
-//		System.out.println(bean1.hashCode());
-//		System.out.println("================================prototype=============================");
-//		System.out.println(bean.hashCode());
-//		System.out.println(bean1.hashCode());
-//		System.out.println("================================prototype=============================");
-//		System.out.println(bean.hashCode());
-//		System.out.println(bean1.hashCode());
+		CreditCardPayment bean2 = context1.getBean(CreditCardPayment.class);
+		CreditCardPayment bean3 = context1.getBean(CreditCardPayment.class);
 
+		DebitCardPayment bean4 = context1.getBean(DebitCardPayment.class);
+		DebitCardPayment bean5 = context1.getBean(DebitCardPayment.class);
+
+		bean.paymentProcessor(12.4);
+		System.out.println("================================singleton=============================");
+		System.out.println(bean.hashCode());
+		System.out.println(bean1.hashCode());
+		System.out.println("================================prototype=============================");
+		System.out.println(bean.hashCode());
+		System.out.println(bean1.hashCode());
+		System.out.println("================================prototype=============================");
+		System.out.println(bean.hashCode());
+		System.out.println(bean1.hashCode());
+
+		
 		bean.paymentProcessor(12.4);
 	}
 
