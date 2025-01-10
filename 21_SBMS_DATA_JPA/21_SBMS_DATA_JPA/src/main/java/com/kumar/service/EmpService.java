@@ -112,50 +112,160 @@ public class EmpService {
 	public void findByEmpName() {
 		System.out.println("findByEmpName()");
 		List<Employee> findByEmpName = this.empRepo.findByEmpName("Kumar Balambeed");
-		findByEmpName.stream().forEach(e->System.out.println(e));
+		findByEmpName.stream().forEach(e -> System.out.println(e));
 	}
-	
+
 	public void findByEmpGend() {
 		System.out.println("findByEmpGend()");
 		List<Employee> findByEmpName = this.empRepo.findByEmpGen("Male");
-		findByEmpName.stream().forEach(e->System.out.println(e));
+		findByEmpName.stream().forEach(e -> System.out.println(e));
 	}
+
 	public void findByEmpDep() {
 		System.out.println("findByEmpDep()");
 		List<Employee> findByEmpName = this.empRepo.findByEmpDep("Developer");
-		findByEmpName.stream().forEach(e->System.out.println(e));
+		findByEmpName.stream().forEach(e -> System.out.println(e));
 	}
+
 	public void findByEmpSal() {
 		System.out.println("findByEmpSal()");
 		List<Employee> findByEmpName = this.empRepo.findByEmpSal(100000.00);
-		findByEmpName.stream().forEach(e->System.out.println(e));
+		findByEmpName.stream().forEach(e -> System.out.println(e));
 	}
-	
+
 	public void findByEmpDepAndEmpGend() {
 		System.out.println("findByEmpDepAndEmpGend()");
-		List<Employee> findByEmpName = this.empRepo.findByEmpDepAndEmpGen("Developer","Male");
-		findByEmpName.stream().forEach(e->System.out.println(e));
+		List<Employee> findByEmpName = this.empRepo.findByEmpDepAndEmpGen("Developer", "Male");
+		findByEmpName.stream().forEach(e -> System.out.println(e));
 	}
+
 	public void findByEmpSalAndEmpName() {
 		System.out.println("findByEmpSalAndEmpName()");
-		List<Employee> findByEmpName = this.empRepo.findByEmpSalAndEmpName(100000.00,"Kumar Balambeed");
-		findByEmpName.stream().forEach(e->System.out.println(e));
+		List<Employee> findByEmpName = this.empRepo.findByEmpSalAndEmpName(100000.00, "Kumar Balambeed");
+		findByEmpName.stream().forEach(e -> System.out.println(e));
 	}
+
 	public void findByEmpDepAndEmpGendAndEmpName() {
 		System.out.println("findByEmpDepAndEmpGendAndEmpName()");
-		List<Employee> findByEmpName = this.empRepo.findByEmpDepAndEmpGenAndEmpName("Developer","Male","Kumar Balambeed");
-		findByEmpName.stream().forEach(e->System.out.println(e));
+		List<Employee> findByEmpName = this.empRepo.findByEmpDepAndEmpGenAndEmpName("Developer", "Male",
+				"Kumar Balambeed");
+		findByEmpName.stream().forEach(e -> System.out.println(e));
 	}
+
 	public void findByEmpDepAndEmpGendAndEmpNameAndEmpSal() {
 		System.out.println("findByEmpDepAndEmpGendAndEmpNameAndEmpSal()");
-		List<Employee> findByEmpName = this.empRepo.findByEmpDepAndEmpGenAndEmpNameAndEmpSal("Developer","Male","Kumar Balambeed",100000.00);
-		findByEmpName.stream().forEach(e->System.out.println(e));
+		List<Employee> findByEmpName = this.empRepo.findByEmpDepAndEmpGenAndEmpNameAndEmpSal("Developer", "Male",
+				"Kumar Balambeed", 100000.00);
+		findByEmpName.stream().forEach(e -> System.out.println(e));
 	}
-	
+
 	public void findByEmpSalGreaterThanEqual() {
 		System.out.println("findByEmpSalGreaterThanEqual()");
 		List<Employee> findByEmpName = this.empRepo.findByEmpSalGreaterThanEqual(100000.00);
-		findByEmpName.stream().forEach(e->System.out.println(e));
+		findByEmpName.stream().forEach(e -> System.out.println(e));
 	}
-	
+
+	public void findAllCustomQuerySql() {
+		System.out.println("findAllCustomQuerySql()");
+		List<Employee> findAllCustomQuerySql = this.empRepo.findAllCustomQuerySql();
+		for (Employee employee : findAllCustomQuerySql) {
+			System.out.println(employee);
+		}
+	}
+
+	public void findAllCustomQueryHql() {
+		System.out.println("findAllCustomQueryHql");
+		List<Employee> findAllCustomQuerySql = this.empRepo.findAllCustomQueryHql();
+		for (Employee employee : findAllCustomQuerySql) {
+			System.out.println(employee);
+		}
+
+	}
+
+	public void findByEmpNameCustomQueryHql() {
+		System.out.println("findByEmpNameCustomQueryHql");
+		Employee employee = this.empRepo.findByEmpNameCustomQueryHql("Kumar Balambeed");
+
+		System.out.println(employee);
+
+	}
+
+	public void findByEmpGenCustomQueryHql() {
+		System.out.println("findByEmpGenCustomQueryHql");
+		List<Object> findByEmpNameCustomQueryHql = this.empRepo.findByEmpGenCustomQueryHql("Male");
+		for (Object employee : findByEmpNameCustomQueryHql) {
+			System.out.println(employee);
+		}
+	}
+
+	public void findByEmpNameCustomQuerySql() {
+		System.out.println("findByEmpNameCustomQuerySql");
+		List<Employee> findByEmpNameCustomQueryHql = this.empRepo.findByEmpNameCustomQuerySql("Kumar Balambeed");
+		for (Employee employee : findByEmpNameCustomQueryHql) {
+			System.out.println(employee);
+		}
+	}
+
+	public void findByEmpGenCustomQuerySql() {
+		System.out.println("findByEmpGenCustomQuerySql");
+		List<Object> findByEmpNameCustomQueryHql = this.empRepo.findByEmpGenCustomQuerySql("Male");
+		for (Object employee : findByEmpNameCustomQueryHql) {
+			System.out.println(employee);
+		}
+	}
+
+	public void customSqlInsert() {
+		System.out.println("customSqlInsert");
+		this.empRepo.customSqlInsert(2, "Kumar Balambeed", "Male", "Java Developer", 200000.00);
+
+	}
+
+	public void customSqlUpdate() {
+		System.out.println("customSqlUpdate");
+		this.empRepo.customSqlUpdate(2, "Sunil Balambeed", "Male", "Doctor", 2000000.00);
+
+	}
+
+	public void customSqlDelete() {
+		System.out.println("customSqlDelete");
+		this.empRepo.customSqlDelete(2);
+
+	}
+
+	public void customHqlInsert() {
+		System.out.println("customHqlInsert");
+		this.empRepo.customHqlInsert(2, "Kumar Balambeed", "Male", "Java Developer", 200000.00);
+
+	}
+
+	public void customHqlUpdate() {
+		System.out.println("customHqlUpdate");
+		this.empRepo.customHqlUpdate(2, "Sunil Balambeed", "Male", "Doctor", 2000000.00);
+
+	}
+
+	public void customHqlDelete() {
+		System.out.println("customHqlDelete");
+		this.empRepo.customHqlDelete(2);
+
+	}
+
+	public void customJpqlInsert() {
+		System.out.println("customJpqlInsert");
+		int e = this.empRepo.customJpqlInsert(2, "Kumar Balambeed", "Male", "Java Developer", 200000.00);
+		System.out.println(e);
+	}
+
+	public void customJpqlUpdate() {
+		System.out.println("customJpqlUpdate");
+		this.empRepo.customJpqlUpdate(2, "Sunil Balambeed", "Male", "Doctor", 2000000.00);
+
+	}
+
+	public void customJpqlDelete() {
+		System.out.println("customJpqlDelete");
+		this.empRepo.customJpqlDelete(2);
+
+	}
+
 }
