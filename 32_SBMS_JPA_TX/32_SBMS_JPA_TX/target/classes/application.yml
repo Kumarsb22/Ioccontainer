@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: 32_SBMS_JPA_TX
+
+    
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/bookdbdev
+    username: postgres
+    password: nic@123
+           
+           
+  jpa:
+    hibernate:
+      ddl-auto: update         
+    show-sql: true
+    open-in-view: true  
